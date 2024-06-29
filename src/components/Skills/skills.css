@@ -1,0 +1,99 @@
+.skill {
+  padding: 0 0 50px 0;
+  position: relative;
+}
+.skill-bx {
+  background-color: var(--color-blue);
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 80px;
+  margin: -60px;
+}
+.skill h2 {
+  font-size: 45px;
+  font-weight: 700;
+}
+.skill p {
+  /* color:; */
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5;
+  margin: 14px 0 75px 0;
+}
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skill-slider .item h5 {
+  font-size: 20px;
+}
+.skill-slider .item .brogress-bar {
+  margin: 0 auto 15px auto;
+}
+/* For the progress bar*/
+.brogress-bar {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+.outer {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  padding: 20px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -12px -2px 10px -8px rgba(255, 255, 255, 0.7);
+}
+.iner {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px --0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+    0px -12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+#number1,
+#number2,
+#number3,
+#number4,
+#number5 {
+  font-weight: 600;
+  color: black;
+}
+circle {
+  fill: none;
+  /* the color */
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  /* the full 472 */
+  stroke-dasharray: 472;
+  /* the hidden part */
+  stroke-dashoffset: 472;
+  animation: anim 2s linear forwards;
+}
+circle[value="80"] {
+    stroke-dasharray: 472;
+  /* the hidden part */
+  stroke-dashoffset: 472;
+  animation: anim 2s linear forwards;
+}
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 165;
+  }
+}

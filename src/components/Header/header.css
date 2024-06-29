@@ -1,0 +1,205 @@
+.navbar {
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: 0.32s ease-in-out;
+  background-color: white;
+  box-shadow: 1px 2px 11px 4px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 1px 2px 11px 4px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 1px 2px 11px 4px rgba(0, 0, 0, 0.09);
+}
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar.scrolled {
+  padding: 0 0;
+  background-color: var(--color-white);
+}
+.navbar-brand {
+  width: 9%;
+  display: inline-block;
+  font-size: 20px;
+  color: var(--color-pink);
+}
+.navbar-collapse {
+  display: flex;
+}
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+.nav-link {
+  font-weight: 400;
+  color: black;
+  letter-spacing: 0.8px;
+  padding: 0 15px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+.nav-link:hover,
+.nav-link.active {
+  opacity: 1;
+}
+.navbar-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.social-icon {
+  display: inline-block;
+  margin-left: 14px;
+}
+.social-icon a {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-blue);
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.social-icon a::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+.social-icon a:hover::before {
+  transform: scale(1);
+}
+.social-icon a svg {
+  position: relative;
+  width: 23px;
+  height: 23px;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+  color: var(--color-white);
+}
+.social-icon a:hover svg {
+  /* filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
+    hue-rotate(346deg) brightness(95%) contrast(86%); */
+  color: var(--color-blue);
+}
+.navbar-text button {
+  font-weight: 700;
+  color: var(--color-pink);
+  border: 1px solid var(--color-pink);
+  padding: 8px 24px;
+  font-size: 16px;
+  margin-left: 18px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.navbar-text button span {
+  z-index: 1;
+}
+.navbar-text button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--color-pink);
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.navbar-text button:hover {
+  color: white;
+}
+.navbar-text button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid black;
+  transition: all 300ms linear;
+  top: -2;
+}
+.navbar-smallscreen {
+  display: none;
+}
+.navbar-smallscreen svg {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.navbar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-pink);
+  z-index: 5;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-overlay .overlay-close {
+  font-size: 27px;
+  color: var(--color-golden);
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.smallscreen-links {
+  list-style: none;
+}
+.smallscreen-links li {
+  cursor: pointer;
+  color: var(--color-white);
+  margin: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.smallscreen-links li a {
+  color: var(--color-white);
+}
+.smallscreen-links li a:hover {
+  color: var(--color-pink);
+}
+@media screen and (max-width: 992px) {
+  .navbar-collapse {
+    display: none;
+  }
+  .navbar-smallscreen {
+    display: flex;
+  }
+  .navbar-brand {
+    width: 0%;
+    font-size: 15px;
+  }
+  .navbar-container {
+    justify-content: space-between;
+  }
+}
+
+.navbar-toggler-icon:focus {
+}
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+}
+.navbar-toggler-icon::after {
+}
